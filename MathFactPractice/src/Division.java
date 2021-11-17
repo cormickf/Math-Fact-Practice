@@ -3,25 +3,26 @@ import java.util.Scanner;
 
 class Division {
 
-    public void division(){
+    public void division(int questions){
         Random number = new Random();
         int wrong = 0;
 
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < questions; i++) {
             int numberOne = number.nextInt(100);
-            int numberTwo = number.nextInt(20);
+            int numberTwo = number.nextInt(20) + 1;
 
-            int correct = (numberOne / numberTwo);
+            double correct = (numberOne / numberTwo);
 
             Scanner q = new Scanner(System.in);
             System.out.println(numberOne + " divided " + numberTwo);
-            int awnser = q.nextInt();
+            double answer = q.nextDouble();
 
-            if (awnser == correct) {
+            if (answer == correct) {
                 System.out.println("Correct!");
 
             } else {
                 System.out.println("Incorrect!");
+                System.out.println("The correct answer is " + answer);
                 wrong++;
 
             }}

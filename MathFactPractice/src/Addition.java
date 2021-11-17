@@ -3,12 +3,12 @@ import java.util.Scanner;
 class Addition {
 
 
-    public void Addition(){
+    public void Addition(int questions){
         Random number = new Random();
         int wrong = 0;
 
 
-        for (int i =0; i < 25; i++) {
+        for (int i =0; i < questions; i++) {
             int firstNumber = number.nextInt(100);
             int secondNumber = number.nextInt(100);
 
@@ -16,14 +16,15 @@ class Addition {
 
             Scanner q = new Scanner(System.in);
             System.out.println(firstNumber + " + " + secondNumber);
-            int awnser = q.nextInt();
+            int answer = q.nextInt();
 
-            if (awnser == correct) {
+            if (answer == correct) {
                 System.out.println("Correct!");
 
 
             } else {
                 System.out.println("Incorrect!");
+                System.out.println("The correct answer is " + answer);
                 wrong++;
 
 

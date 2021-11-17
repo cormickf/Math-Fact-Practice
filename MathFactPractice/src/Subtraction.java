@@ -3,10 +3,10 @@ import java.util.Random;
 class Subtraction {
 
 
-    public void subtraction(){
+    public void subtraction(int questions){
         Random number = new Random();
         int wrong = 0;
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < questions; i++) {
             int numberOne = number.nextInt(100);
             int numberTwo = number.nextInt(50);
 
@@ -15,13 +15,14 @@ class Subtraction {
 
             Scanner q2 = new Scanner(System.in);
             System.out.println(numberOne + " - " + numberTwo);
-            double awnser = q2.nextInt();
+            double answer = q2.nextInt();
 
 
-            if (awnser == correct) {
+            if (answer == correct) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("Incorrect!");
+                System.out.println("The correct answer is " + answer);
                 wrong++;
             }
         }
