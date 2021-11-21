@@ -26,7 +26,8 @@ class Multiplication {
                 wrong++;
 
             }}
-        System.out.println("You got " + wrong + " questions incorrect!");
+        double percent = (wrong * 100) / questions;
+        System.out.println("You got " + wrong + " incorrect" + "\n" + " You got a %" + percent + " On this lesson!");
 
 
 
